@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yunlong Song</title>
+    <link rel="stylesheet" href="style.css?v=20250913-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts for academic typography -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-image-container">
+                <img src="images/me.jpg" alt="Yunlong Song" class="profile-image">
+            </div>
+            <div class="sidebar-links">
+                <a href="https://scholar.google.com/citations?user=EzAXL9QAAAAJ&hl=en" title="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="https://x.com/realyunlong" title="Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/yun-long" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yunlong-song-a80baa124" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <br>
+            <a href="index.html" title="Home">Home</a>
+            <br>
+            <a href="project.html" title="Projects">Research Projects</a>
+            <br>
+            <a href="opensource.html" title="OpenSource">Open-source Code</a>
+            <br>
+            <a href="blog.html" title="blog">Blogs</a>
+            <br>
+            <a href="about.html" title="about">About Me</a>
+        </div>
+
+        <div class="main-content">
+            <h1>Yunlong Song - 宋运龙</h1>
+            <section class="intro">
+              <p>
+                I am a Founding Research Scientist at <a href="https://genesis-ai.company/">Genesis AI</a>.
+              </p>
+
+              <p>
+                I completed my PhD under the supervision of <a
+                  href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Prof.
+                  Davide Scaramuzza</a> at the <a
+                href="https://rpg.ifi.uzh.ch/">Robotics and Perception
+                Group</a>, part of the Department of Informatics and Institute of Neuroinformatics (<a href="https://www.uzh.ch/en.html">University
+                of Zurich</a> & <a href="https://ethz.ch/en.html">ETH
+                Zurich</a>).
+
+                During my PhD, I was an associated researcher at the <a
+                  href="https://ai.ethz.ch/about-us/people/associated.html">ETH
+                  AI Center</a> and a visiting researcher at <a
+                href="https://www.mit.edu/">MIT</a>.
+
+                My work has involved close collaboration with leading researchers and institutions to tackle fundamental 
+                problems in AI and robotics. Highlights include developing a superhuman car racing agent with
+                <a href="https://www.gran-turismo.com/us/gran-turismo-sophy/project/">Sony AI</a>; advancing autonomous
+                drone racing in collaboration with <a href="https://matthias.pw/">Matthias Müller</a> and
+                <a href="https://vladlen.info/">Vladlen Koltun</a>; building a differentiable simulation framework for
+                quadruped locomotion with <a href="https://meche.mit.edu/people/faculty/SANGBAE@MIT.EDU">Prof. Sangbae Kim</a>;
+                exploring perceptive quadruped control with <a href="https://fanshi14.github.io/me/">Prof. Fan Shi</a>
+                and <a href="https://rsl.ethz.ch/the-lab/people/person-detail.MTIxOTEx.TGlzdC8yNDQxLC0xNDI1MTk1NzM1.html">Prof. Marco Hutter</a>;
+                and investigating fundamental reinforcement learning principles with <a href="https://www.ias.informatik.tu-darmstadt.de/Team/BorisBelousov">Boris Belousov</a>
+                and <a href="https://www.ias.informatik.tu-darmstadt.de/Member/JanPeters">Prof. Jan Peters</a>.
+
+
+            </p>
+
+
+            </section>
+
+            <hr>
+
+            <section class="research-interests">
+                <h3>Research Interests</h3>
+                <p>
+                    My research focuses on developing next-generation robotic
+                    systems capable of learning, adapting, and understanding in
+                    complex real-world environments. I have explored various
+                    topics in robotics and machine learning, including optimal
+                    control, reinforcement learning, differentiable simulation,
+                    representation learning, and vision-based control.
+                    <!--  -->
+                    Beyond theoretical understanding, I have hands-on
+                    experience with a range of robotic platforms, including the
+                    <span class="platform-image"
+                    data-image="images/furuta.jpg">Furuta Pendulum</span>,
+                    <span class="platform-image"
+                    data-image="images/wam_da.jpg">Barrett WAM Arm</span>,
+                    <span class="platform-image"
+                    data-image="images/drone.jpg">high-performance FPV
+                    drone</span>, <span class="platform-image"
+                    data-image="images/mit_cheetah.jpg">MIT Mini Cheetah</span>,
+                    and robotic manipulators.
+                    <!--  -->
+                    My past research has primarily focused on developing robust
+                    skill-level policies for diverse robotic tasks. Currently,
+                    I am particularly interested in integrating large
+                    vision-language-action models with low-level robotic skills
+                    to enable autonomous systems to perform complex, real-world
+                    tasks with greater efficiency and adaptability.
+
+
+                    My current research interests include:
+
+                </p>
+                <ul>
+                    <li>Large-scale Reinforcement Learning</li>
+                    <li>Reinforcement Learning for Mobile/Whole-body Manipulation</li>
+                    <li>Direct Policy Optimization for Pixel-to-Action Control</li>
+                    <li>Post-training of Robotics Foundation Models</li>
+                    <li>Multimodal Policy Learning</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="publications">
+                <h3>Selected Pulications</h3>
+                Some peronal favorites from my publication list:
+                <ul>
+                    <li>
+                        <div class="publication-details">
+                          <strong>Learning Vision-based Agile Flight via Differentiable Physics</strong>
+                          <div class="publication-authors">
+                            Y. Zhang*, Y. Hu*, Y. Song*, D. Zou and W. Lin
+                          </div>
+                          <div class="publication-venue-links">
+                            <span class="publication-venue">Nature Machine Intelligence, 2025</span>
+                            <span class="paper-links">
+                                <a href="https://www.nature.com/articles/s42256-025-01048-0">PDF</a>
+                                <a href="https://youtu.be/LKg9hJqc2cc">Video</a>
+                            </span>
+                          </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="publication-details">
+                          <strong>Learning Quadruped Locomotion Using Differentiable Simulation</strong>
+                          <div class="publication-authors">
+                              Y. Song, S. Kim, and D. Scaramuzza
+                          </div>
+                          <div class="publication-venue-links">
+                            <span class="publication-venue">CoRL (oral presentation), 2024</span>
+                            <span class="paper-links">
+                                <a href="https://openreview.net/forum?id=XopATjibyz">PDF</a>
+                                <a href="https://youtu.be/weNq_w715xM">Video</a>
+                            </span>
+                          </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+
+                        <div class="publication-details">
+                            <strong>Reaching the Limit in Autonomous Racing: Optimal Control Versus Reinforcement Learning</strong>
+                            <div class="publication-authors">
+                                Y. Song, A. Romero, M. Müller, V. Koltun, and D. Scaramuzza
+                            </div>
+                            <div class="publication-venue-links">
+                                <span class="publication-venue">Science Robotics (featured on the Cover), 2023</span>
+                                <span class="paper-links">
+                                    <a href="https://www.science.org/stoken/author-tokens/ST-1485/full">PDF</a>
+                                    <a href="https://youtu.be/HGULBBAo5lA">Video</a>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+
+                        <div class="publication-details">
+                            <strong>Policy Search for Model Predictive Control for Agile Drone Flight</strong>
+                            <div class="publication-authors">
+                                Y. Song and D. Scaramuzza
+                            </div>
+                            <div class="publication-venue-links">
+                              <span class="publication-venue">IEEE T-RO, 2022</span>
+                              <span class="paper-links">
+                                  <a href="https://ieeexplore.ieee.org/abstract/document/9719129">PDF</a>
+                                  <a href="https://youtu.be/Qei7oGiEIxY">Video</a>
+                              </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+
+                        <div class="publication-details">
+                            <strong>Flightmare: A Flexible Quadrotor Simulator</strong>
+                            <div class="publication-authors">
+                                Y. Song, S. Naji, E. Kaufmann, A. Loquercio, D. Scaramuzza
+                            </div>
+                            <div class="publication-venue-links">
+                            <span class="publication-venue">CoRL, 2021</span>
+                              <span class="paper-links">
+                                  <a href="https://proceedings.mlr.press/v155/song21a.html">PDF</a>
+                                  <a href="https://youtu.be/m9Mx1BCNGFU">Video</a>
+                              </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+
+                        <div class="publication-details">
+                            <strong>Learning High-level Policies for Model Predictive Control</strong>
+                            <div class="publication-authors">
+                                Y. Song and D. Scaramuzza
+                            </div>
+                            <div class="publication-venue-links">
+                              <span class="publication-venue">IRSO, 2020 (my very first publication)</span>
+                              <span class="paper-links">
+                                  <a href="https://arxiv.org/abs/2007.10284">PDF</a>
+                                  <a href="https://youtu.be/2uQcRnp7yI0">Video</a>
+                              </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="publications">
+                <h3>Ph.D. Thesis</h3>
+                <ul>
+                    <li>
+                        <div class="publication-details">
+                          <strong>Learning Robot Control: From Reinforcement Learning to Differentiable Simulation</strong>
+                          <div class="publication-authors">
+                            Yunlong Song, 2024 (summa cum laude)
+                          </div>
+                          <div class="publication-venue-links">
+                            <span class="paper-links"> Links:
+                                <a href="https://www.zora.uzh.ch/id/eprint/277906/1/277906.pdf#page=19.89">PDF</a>
+                                <a href="https://youtu.be/DskNmbKzwf0?si=PYfEU-9RyGKbAZt2">PhD Defense</a>
+                            </span>
+                          </div>
+                          <div class="publication-venue-links">
+                            <span class="paper-links"> Committee:
+                                <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Davide Scaramuzza</a>
+                                <a href="https://rsl.ethz.ch/the-lab/people/person-detail.MTIxOTEx.TGlzdC8yNDQxLC0xNDI1MTk1NzM1.html">Marco Hutter</a>
+                                <a href="https://sites.google.com/view/riedmiller/home">Martin Riedmiller</a>
+                                <a href="https://yukezhu.me/">Yuke Zhu</a>
+                            </span>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+    function toggleDescription(element) {
+                // Prevent default link behavior
+                event.preventDefault();
+
+                // Find the description div
+                const description = element.closest('.project-item').querySelector('.project-description');
+                const toggleIcon = element.querySelector('.toggle-icon');
+
+                // Toggle visibility
+                if (description.style.display === 'none') {
+                    description.style.display = 'block';
+                    toggleIcon.textContent = '▲';
+                } else {
+                    description.style.display = 'none';
+                    toggleIcon.textContent = '▼';
+                }
+            }
+
+            // On page load, set all project descriptions to be visible by default
+            document.addEventListener('DOMContentLoaded', function() {
+                const projectDescriptions = document.querySelectorAll('.project-description');
+                const toggleIcons = document.querySelectorAll('.toggle-icon');
+                const platformImages = document.querySelectorAll('.platform-image');
+                const modal = document.getElementById('imageModal');
+                const modalImage = document.getElementById('modalImage');
+                const closeModal = document.querySelector('.close-modal');
+
+                projectDescriptions.forEach(description => {
+                    description.style.display = 'block';
+                });
+
+                toggleIcons.forEach(icon => {
+                    icon.textContent = '▲';
+                });
+
+                // Image Modal Logic
+                platformImages.forEach(platform => {
+                    platform.addEventListener('click', function() {
+                        const imageName = this.getAttribute('data-image');
+                        modalImage.src = imageName;
+                        modal.style.display = 'flex';
+                    });
+                });
+
+                closeModal.onclick = function() {
+                    modal.style.display = 'none';
+                }
+
+                window.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            });
+    </script>
+
+</body>
+</html>
