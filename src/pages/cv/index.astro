@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { profile } from "../../data/profile";
+---
+
+<BaseLayout title="CV | Liming Zheng">
+  <span class="eyebrow">Curriculum Vitae</span>
+  <h1>CV</h1>
+  <p class="lead">My current curriculum vitae.</p>
+  <div class="actions">
+    <a class="button primary" href={profile.cv}>Download CV</a>
+  </div>
+  <iframe class="pdf-frame" src={profile.cv} title="Liming Zheng CV"></iframe>
+</BaseLayout>

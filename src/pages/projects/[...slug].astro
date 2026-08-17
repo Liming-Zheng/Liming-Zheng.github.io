@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<ContentLayout
+  title={project.data.title}
+  description={project.data.subtitle}
+  image={project.data.image}
+  date={project.data.date}
+  venue={project.data.venue}
+  status={project.data.status}
+  tags={project.data.tags}
+>
+  <div class="project-detail-media">
+    {project.data.video ? (
+      <video controls playsinline preload="metadata" poster={project.data.videoPoster || project.data.image}>
+        <source src={project.data.video} type="video/mp4" />
+      </video>
+    ) : project.data.image ? (
+      <img src={project.data.image} alt={`${project.data.title} research project`} />
+    ) : null}
+    {project.data.videoCaption && <div class="media-caption">{project.data.videoCaption}</div>}
+  </div>
+  {project.data.contributions.length > 0 && (
+    <div class="project-summary">
+      <h2>Key contributions</h2>
+      <ul>
+        {project.data.contributions.map((contribution) => <li>{contribution}</li>)}
+      </ul>
+      {project.data.role && <p><strong>My role:</strong> {project.data.role}</p>}
+    </div>
+  )}
+  {project.data.links.length > 0 && (
+    <div class="actions">
+      {project.data.links.map((link) => <a class="button" href={link.url}>{link.label}</a>)}
+    </div>
+  )}
+  <Content />
+  {project.data.media.length > 0 && (
+    <section class="supplementary-section" aria-labelledby="supplementary-media-title">
+      <span class="eyebrow">Additional material</span>
+      <h2 id="supplementary-media-title">Supplementary media</h2>
+      <p class="supplementary-intro">
+        Full experimental videos associated with this project. The selected clip above provides a
+        quick introduction; the videos below document the individual experiments and demonstrations.
+      </p>
+      <div class="supplementary-grid">
+        {project.data.media.map((item) => (
+          <article class="supplementary-card">
+            <video controls playsinline preload="metadata" poster={item.poster}>
+              <source src={item.src} type="video/mp4" />
+            </video>
+            <div class="supplementary-card-body">
+              <h3>{item.title}</h3>
+              {item.description && <p>{item.description}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+</ContentLayout>

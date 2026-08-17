@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const publications = [
+  {
+    year: "2026",
+    title: "A squirrel-inspired drone with enhanced stability, agility and maneuverability via whole-body morphing",
+    authors: "Liming Zheng, Alexander van Zuijlen, and Salua Hamaza",
+    venue: "Nature Communications 17, 6365",
+    paper: "https://doi.org/10.1038/s41467-026-72822-w",
+    featured: true
+  },
+  {
+    year: "2026",
+    title: "Cooking beyond frames: A stereo event camera dataset in the kitchen",
+    authors: "Chengming Feng, Hesam Araghi, Liming Zheng, Julien Dupeyroux, Xucong Zhang, Jan van Gemert, and Nergis Tomen",
+    venue: "European Conference on Computer Vision (ECCV), oral presentation",
+    featured: false
+  },
+  {
+    year: "2025",
+    title: "The influence of wing and tail morphology on the aerodynamics of gliding mammals",
+    authors: "Liming Zheng*, Baihui Chen*, Alexander van Zuijlen, and Salua Hamaza",
+    venue: "International Symposium on Adaptive Motion of Animals and Machines (AMAM)",
+    featured: false
+  },
+  {
+    year: "2024",
+    title: "ALBERO: Agile landing on branches for environmental robotics operations",
+    authors: "Liming Zheng and Salua Hamaza",
+    venue: "IEEE Robotics and Automation Letters 9(3), 2845–2852",
+    paper: "https://doi.org/10.1109/LRA.2024.3349914",
+    featured: true
+  },
+  {
+    year: "2022",
+    title: "Using deep reinforcement learning to improve the robustness of UAV lateral-directional control",
+    authors: "Rui Wang, Zhou Zhou, Xiaoping Zhu, and Liming Zheng",
+    venue: "33rd Congress of the International Council of the Aeronautical Sciences (ICAS)",
+    featured: false
+  },
+  {
+    year: "2020",
+    title: "A novel control mode of bionic morphing tail based on deep reinforcement learning",
+    authors: "Liming Zheng, Zhou Zhou, Pengbo Sun, Zhilin Zhang, and Rui Wang",
+    venue: "arXiv preprint",
+    paper: "https://arxiv.org/abs/2010.03814",
+    featured: false
+  }
+];
+---
+
+<BaseLayout title="Publications | Liming Zheng" description="Selected publications by Liming Zheng in bio-inspired aerial robotics, morphing aircraft, autonomous perching, and flight control.">
+  <span class="eyebrow">Research output</span>
+  <h1>Publications</h1>
+  <p class="lead">
+    Selected journal and conference papers on bio-inspired aerial robotics, morphing aircraft,
+    autonomous perching, and flight control. Under-review work is intentionally omitted.
+  </p>
+
+  <ol class="publication-list">
+    {publications.map((publication) => (
+      <li class:list={["publication", { featured: publication.featured }]}>
+        <div class="publication-year">{publication.year}</div>
+        <div>
+          <h2>{publication.title}</h2>
+          <p class="publication-authors">{publication.authors}</p>
+          <p class="publication-venue">{publication.venue}</p>
+          {publication.paper && <a class="text-link" href={publication.paper}>Paper →</a>}
+        </div>
+      </li>
+    ))}
+  </ol>
+</BaseLayout>

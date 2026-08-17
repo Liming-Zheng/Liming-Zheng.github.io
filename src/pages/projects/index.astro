@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Research | Liming Zheng" image="/images/research/squirreldrone-whole-body-morphing.jpg">
+  <span class="eyebrow">Research projects</span>
+  <h1>Selected research</h1>
+  <p class="lead">My work combines bio-inspired morphology, aerodynamic analysis, mechanical design, control, and flight experiments. The projects below explain the research question behind each robot, how I investigated it, and what the experiments showed.</p>
+
+  <div class="project-showcase">
+    {projects.map((project) => (
+      <article class="project-feature">
+        <div class="project-media">
+          {project.data.video ? (
+            <video autoplay loop muted playsinline preload="metadata" poster={project.data.videoPoster || project.data.image}>
+              <source src={project.data.video} type="video/mp4" />
+            </video>
+          ) : project.data.image ? (
+            <img src={project.data.image} alt={`${project.data.title} research project`} />
+          ) : null}
+          {project.data.videoCaption && <div class="media-caption">{project.data.videoCaption}</div>}
+        </div>
+        <div class="project-copy">
+          <div class="item-meta">{project.data.venue} · {project.data.status || project.data.date}</div>
+          <h2><a href={`/projects/${project.slug}/`}>{project.data.title}</a></h2>
+          <p class="project-subtitle">{project.data.subtitle}</p>
+          <div class="research-detail-grid">
+            <div class="research-detail-block">
+              <h3>Research question</h3>
+              <p>{project.data.researchQuestion}</p>
+            </div>
+            <div class="research-detail-block">
+              <h3>System and approach</h3>
+              <p>{project.data.approach}</p>
+            </div>
+          </div>
+          {project.data.evidence.length > 0 && (
+            <div class="key-evidence">
+              <h3>Key experimental evidence</h3>
+              <ul>
+                {project.data.evidence.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          )}
+          {project.data.role && <p class="project-role"><strong>My role:</strong> {project.data.role}</p>}
+          <div class="actions compact">
+            <a class="button primary" href={`/projects/${project.slug}/`}>Project details</a>
+            {project.data.links.slice(0, 2).map((link) => <a class="button" href={link.url}>{link.label}</a>)}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

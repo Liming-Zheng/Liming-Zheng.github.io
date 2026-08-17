@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import { profile } from "../data/profile";
+
+const {
+  title = `${profile.name} | Bio-inspired Aerial Robotics`,
+  description = profile.role,
+  image
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = image ? new URL(image, Astro.site) : undefined;
+
+const nav = [
+  ["Home", "/"],
+  ["Research", "/projects/"],
+  ["Publications", "/publications/"],
+  ["CV", "/cv/"]
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    <meta name="twitter:card" content={socialImage ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {socialImage && <meta name="twitter:image" content={socialImage} />}
+    <link rel="icon" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          {profile.name}
+          <span>{profile.nameZh} · {profile.domain}</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          {nav.map(([label, href]) => <a href={href}>{label}</a>)}
+        </nav>
+      </header>
+
+      <main class="site-main">
+        <slot />
+        <footer class="footer">
+          © {new Date().getFullYear()} {profile.name}. Built with Astro and hosted as a static site.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

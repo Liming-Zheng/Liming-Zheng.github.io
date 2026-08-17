@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { title, description, image, date, venue, status, tags = [] } = Astro.props;
+---
+
+<BaseLayout title={`${title} | Liming Zheng`} description={description} image={image}>
+  <article class="prose">
+    <span class="eyebrow">{[venue, status, date].filter(Boolean).join(" · ")}</span>
+    <h1>{title}</h1>
+    {description && <p class="lead">{description}</p>}
+    {tags.length > 0 && (
+      <div class="tags">
+        {tags.map((tag: string) => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+    <slot />
+  </article>
+</BaseLayout>

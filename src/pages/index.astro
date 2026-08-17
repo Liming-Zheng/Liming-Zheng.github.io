@@ -1,0 +1,137 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout image="/images/research/squirreldrone-whole-body-morphing.jpg">
+  <section class="profile-hero">
+    <figure class="profile-portrait">
+      <img src="/images/me.png" alt="Liming Zheng in the aerial robotics laboratory at TU Delft" />
+      <figcaption>Bio-inspired aerial robotics · TU Delft</figcaption>
+    </figure>
+
+    <div class="profile-intro">
+      <span class="eyebrow">Morphology-driven intelligence</span>
+      <h1>{profile.name}<span>{profile.nameZh}</span></h1>
+      <p>
+        I am a researcher in bio-inspired aerial robotics at TU Delft, where I am completing my
+        Ph.D. under the supervision of Prof. Guido de Croon, Dr. Salua Hamaza, and Dr. Alexander
+        van Zuijlen.
+      </p>
+      <p>
+        I study how <strong>morphology can become part of a robot's intelligence</strong>. Inspired
+        by animal flight, I build aerial robots that reshape their bodies and aerodynamic surfaces
+        to achieve stable flight, agile manoeuvring, and physical interaction with the environment.
+        My work combines aerodynamic analysis, wind-tunnel experiments, mechanical design,
+        nonlinear control, and autonomous flight testing.
+      </p>
+      <p>
+        I have developed several morphing aerial robots, including flying-squirrel- and
+        colugo-inspired platforms for whole-body morphing, adaptive gliding, aerodynamic braking,
+        and perching. My work has appeared in <strong>Nature Communications</strong> and
+        <strong>IEEE Robotics and Automation Letters</strong>. I also contributed to the XPRIZE
+        Rainforest competition and was part of the team that won first place at the 2024
+        International Micro Air Vehicle Conference and Competition.
+      </p>
+      <p class="research-aim">
+        My long-term goal is to build aerial robots whose intelligence comes from computation and
+        from how their bodies sense, adapt to, and interact with the physical world.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="/projects/">Research</a>
+        <a class="button" href={profile.cv}>Download CV</a>
+        <a class="button" href={`mailto:${profile.email}`}>Email</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-research" aria-labelledby="selected-research-title">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Selected research</span>
+        <h2 id="selected-research-title">Selected research</h2>
+        <p>Bio-inspired aerial robots for morphing flight, aerodynamic control, and physical interaction.</p>
+      </div>
+      <a class="text-link" href="/projects/">View detailed research</a>
+    </div>
+
+    <div class="featured-grid">
+      {projects.map((project) => (
+        <article class="research-card">
+          <a class="card-media" href={`/projects/${project.slug}/`} aria-label={`Read about ${project.data.title}`}>
+            {project.data.video ? (
+              <video autoplay loop muted playsinline preload="metadata" poster={project.data.videoPoster || project.data.image}>
+                <source src={project.data.video} type="video/mp4" />
+              </video>
+            ) : project.data.image ? (
+              <img src={project.data.image} alt={`${project.data.title} research project`} />
+            ) : null}
+          </a>
+          <div class="research-card-body">
+            <div class="item-meta">{project.data.venue} · {project.data.status || project.data.date}</div>
+            <h3><a href={`/projects/${project.slug}/`}>{project.data.title}</a></h3>
+            <p>{project.data.homeSummary || project.data.subtitle}</p>
+            <div class="actions compact">
+              <a class="button primary" href={`/projects/${project.slug}/`}>Research story</a>
+              {project.data.links.slice(0, 1).map((link) => <a class="button" href={link.url}>{link.label}</a>)}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="home-highlights" aria-labelledby="beyond-publications-title">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Beyond publications</span>
+        <h2 id="beyond-publications-title">Field work and team achievements</h2>
+        <p>Research systems also have to work outside controlled experiments and as part of a larger team.</p>
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <a href="https://www.tudelft.nl/ai/biomorphic-intelligence-lab/news-1/messages/winning-imav2024-drone-competition/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/highlights/imav-2024-award.png" alt="Liming Zheng and the TU Delft team receiving the IMAV 2024 indoor competition award" />
+        </a>
+        <div class="evidence-card-body">
+          <div class="item-meta">Team competition · 2024</div>
+          <h3>First place at the IMAV 2024 indoor competition</h3>
+          <p>
+            I was part of the TU Delft team that built and operated an autonomous drone for a
+            wildlife-themed indoor mission. The system navigated gates, landed on small targets,
+            grasped objects, and identified projected animals.
+          </p>
+          <div class="evidence-footer">
+            <a class="text-link" href="https://www.tudelft.nl/ai/biomorphic-intelligence-lab/news-1/messages/winning-imav2024-drone-competition/" target="_blank" rel="noopener noreferrer">TU Delft report</a>
+            <span>Image: TU Delft</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="evidence-card">
+        <a href="https://www.tudelft.nl/en/2024/tu-delft/tu-delft-jointly-wins-in-xprize-rainforest-competition-in-brazil" target="_blank" rel="noopener noreferrer">
+          <img src="/images/highlights/xprize-rainforest-liming.png" alt="Liming Zheng testing a branch-perching drone with the ETHBiodivX team in the rainforest" />
+        </a>
+        <div class="evidence-card-body">
+          <div class="item-meta">Field robotics · 2023 to 2024</div>
+          <h3>XPRIZE Rainforest with ETHBiodivX</h3>
+          <p>
+            I contributed to TU Delft's branch-perching and bioacoustics drone work within
+            ETHBiodivX. A 2023 TU Delft story names me as a developer of the research platform;
+            the team later received the 2024 XPRIZE Rainforest Bonus Prize.
+          </p>
+          <div class="evidence-links">
+            <a class="button" href="https://www.tudelft.nl/en/2023/lr/flying-robots-survey-biodiversity-and-climate-inside-tropical-rainforests" target="_blank" rel="noopener noreferrer">Field project</a>
+            <a class="button" href="https://www.tudelft.nl/en/2024/tu-delft/tu-delft-jointly-wins-in-xprize-rainforest-competition-in-brazil" target="_blank" rel="noopener noreferrer">Prize report</a>
+          </div>
+          <div class="evidence-footer evidence-footer-credit"><span>Image: TU Delft</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
