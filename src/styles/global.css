@@ -569,6 +569,29 @@ h3 {
   scrollbar-width: thin;
 }
 
+.carousel-hint {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 2px 2px 12px;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}
+
+.carousel-hint span {
+  color: var(--signal);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.carousel-hint-inline {
+  margin: 0;
+  white-space: nowrap;
+}
+
 .experience-carousel .research-card {
   display: flex;
   flex: 0 0 calc((100% - 36px) / 3);
@@ -1524,6 +1547,11 @@ h3 {
   .experience-carousel {
     margin-right: -16px;
     padding-right: 16px;
+  }
+
+  .carousel-hint {
+    justify-content: flex-start;
+    font-size: 0.72rem;
   }
 
   .experience-carousel .research-card {
