@@ -26,6 +26,7 @@ export const profile = {
     "Bio-inspired aerial robotics",
     "Morphing aircraft",
     "Adaptive flight and perching",
+    "Field robotics and environmental monitoring",
     "Flight dynamics and control"
   ]
 };
