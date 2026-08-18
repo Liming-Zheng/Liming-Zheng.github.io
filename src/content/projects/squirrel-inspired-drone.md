@@ -7,7 +7,7 @@ venue: "Nature Communications"
 status: "Published in 2026"
 homeSummary: "A soft-membrane drone that coordinates its limbs and tail to reshape the entire airframe, tuning stability, agility, and manoeuvrability."
 researchQuestion: "Can a soft-membrane aircraft use coordinated whole-body shape change to move between stable and agile flight, rather than accepting the fixed characteristics of a conventional airframe?"
-approach: "SquirrelDrone combines actively controlled forelimbs, hindlimbs, and tail with passive ribs and a compliant membrane. I characterized the changing surface geometry and aerodynamic forces in the wind tunnel, tested open-loop roll and pitch responses, and validated the system in powered flight."
+approach: "SquirrelDrone combines actively controlled forelimbs, hindlimbs, and tail with passive ribs and a compliant membrane. Liming characterized the changing surface geometry and aerodynamic forces in the wind tunnel, tested open-loop roll and pitch responses, and validated the system in powered flight."
 evidence:
   - "At 12 m/s, aerodynamic loading raised the passive ribs by about 10% to 13% of the local chord."
   - "Below 24° angle of attack, passive rib deformation increased the lift coefficient by more than 0.1 compared with fixed ribs and maintained longitudinal static stability across the tested range."
@@ -59,7 +59,7 @@ media:
 
 **Citation:** Liming Zheng, Alexander van Zuijlen, and Salua Hamaza. "A squirrel-inspired drone with enhanced stability, agility and maneuverability via whole-body morphing." *Nature Communications*, 2026.
 
-This project investigates how gliding mammals, especially flying squirrels, coordinate their limbs, tail, and compliant flight membrane. I translated these biological features into a powered aerial robot whose complete aerodynamic shape can change during flight.
+This project investigates how gliding mammals, especially flying squirrels, coordinate their limbs, tail, and compliant flight membrane. Liming Zheng translated these biological features into a powered aerial robot whose complete aerodynamic shape can change during flight.
 
 ## The research challenge
 
@@ -71,7 +71,7 @@ SquirrelDrone uses five actuators to control its forelimbs, hindlimbs, and tail.
 
 ## Experimental programme
 
-I combined membrane-shape reconstruction, wind-tunnel force and moment measurements, and dynamic tests. Reflective markers recorded how the soft surface changed under aerodynamic loading. Balance measurements quantified lift, drag, and stability derivatives across limb and tail configurations. Tethered open-loop tests then measured roll and pitch responses, followed by pull-up manoeuvres and outdoor flights.
+Liming combined membrane-shape reconstruction, wind-tunnel force and moment measurements, and dynamic tests. Reflective markers recorded how the soft surface changed under aerodynamic loading. Balance measurements quantified lift, drag, and stability derivatives across limb and tail configurations. Tethered open-loop tests then measured roll and pitch responses, followed by pull-up manoeuvres and outdoor flights.
 
 ## Main findings
 

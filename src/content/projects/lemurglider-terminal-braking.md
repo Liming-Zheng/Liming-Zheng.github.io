@@ -7,7 +7,7 @@ venue: "Proceedings of the National Academy of Sciences"
 status: "Under review"
 homeSummary: "A colugo-inspired glider that couples head and body morphing to restore pitch stability, increase aerodynamic braking, and prepare for perching."
 researchQuestion: "How can a gliding robot shed energy rapidly for perching while retaining pitch stability as its angle of attack rises and the flow begins to separate?"
-approach: "LemurGlider coordinates head motion with deformation of the anterior membrane and controls the posterior surface independently. I combined steady and prescribed pitch-up wind-tunnel experiments with aerodynamic modelling, flow measurements, and free-flight braking tests."
+approach: "LemurGlider coordinates head motion with deformation of the anterior membrane and controls the posterior surface independently. Liming combined steady and prescribed pitch-up wind-tunnel experiments with aerodynamic modelling, flow measurements, and free-flight braking tests."
 evidence:
   - "Head scheduling shifted maximum lift from 27° to 42° angle of attack and changed the pitching response from destabilizing to restoring."
   - "Posterior actuation set zero-pitch-moment equilibria from 0° to 50° angle of attack. Faster pitch-up increased maximum lift by 41% and raised the drag coefficient at maximum lift from 0.63 to 1.29."
@@ -69,7 +69,7 @@ The platform draws inspiration from the head and anterior membrane of colugos an
 
 ## Experimental programme
 
-I designed and built LemurGlider, then tested it under steady angles of attack and prescribed pitch-up motions in the wind tunnel. Force and moment measurements were paired with aerodynamic modelling and flow diagnostics. Free-flight experiments tested whether the measured mechanisms could produce terminal braking toward targets at different heights.
+Liming Zheng designed and built LemurGlider, then tested it under steady angles of attack and prescribed pitch-up motions in the wind tunnel. Force and moment measurements were paired with aerodynamic modelling and flow diagnostics. Free-flight experiments tested whether the measured mechanisms could produce terminal braking toward targets at different heights.
 
 ## Main findings
 

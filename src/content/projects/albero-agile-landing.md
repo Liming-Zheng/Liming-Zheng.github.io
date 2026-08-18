@@ -7,7 +7,7 @@ venue: "IEEE Robotics and Automation Letters"
 status: "Published in 2024"
 homeSummary: "An ultra-fast gripper and motion-planning framework that enables a quadrotor to perch dynamically on steep, naturally oriented branches."
 researchQuestion: "Can a conventional quadrotor perch dynamically on steep natural branches when it cannot hold an inclined contact pose long enough for a slow gripper to close?"
-approach: "ALBERO combines an actively triggered bistable spring-steel gripper with trajectory planning for branch contact. I built grippers for two vehicle scales, characterized closure and load capacity, integrated the hardware with a quadrotor, and tested indoor, outdoor, and rainforest perching."
+approach: "ALBERO combines an actively triggered bistable spring-steel gripper with trajectory planning for branch contact. Liming built grippers for two vehicle scales, characterized closure and load capacity, integrated the hardware with a quadrotor, and tested indoor, outdoor, and rainforest perching."
 evidence:
   - "The large and small grippers completed closure in 67 ms and 42 ms, respectively."
   - "The design scaled from a 0.95 kg quadrotor to a 0.148 kg microdrone; indoor flight tests covered branch inclinations of 0°, 20°, and 40°."

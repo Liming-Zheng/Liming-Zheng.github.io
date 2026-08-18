@@ -17,7 +17,7 @@ const fieldWork = [
     summary:
       "A TU Delft team project to develop and operate an autonomous drone for a wildlife-themed indoor mission involving navigation, precision landing, object interaction, and visual identification.",
     role:
-      "I contributed to the development, testing, and competition operation of the autonomous aerial system as part of the TU Delft team.",
+      "Liming contributed to the development, testing, and competition operation of the autonomous aerial system as part of the TU Delft team.",
     highlights: [
       "First place in the IMAV 2024 indoor competition",
       "Autonomous navigation through gates and confined spaces",
@@ -47,7 +47,7 @@ const fieldWork = [
     summary:
       "A field-robotics effort using aerial systems to help survey rainforest biodiversity. TU Delft contributed a branch-perching and bioacoustics drone platform to the ETHBiodivX team.",
     role:
-      "I contributed to the development and field testing of TU Delft's branch-perching and bioacoustics drone platform within ETHBiodivX.",
+      "Liming contributed to the development and field testing of TU Delft's branch-perching and bioacoustics drone platform within ETHBiodivX.",
     highlights: [
       "Field deployment in a tropical rainforest environment",
       "Branch perching for persistent bioacoustic monitoring",

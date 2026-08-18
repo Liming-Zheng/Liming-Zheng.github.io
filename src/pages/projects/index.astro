@@ -8,7 +8,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
 <BaseLayout title="Research | Liming Zheng" image="/images/research/squirreldrone-whole-body-morphing.jpg">
   <span class="eyebrow">Research projects</span>
   <h1>Selected research</h1>
-  <p class="lead">My work combines bio-inspired morphology, aerodynamic analysis, mechanical design, control, and flight experiments. The projects below explain the research question behind each robot, how I investigated it, and what the experiments showed.</p>
+  <p class="lead">Liming Zheng's work combines bio-inspired morphology, aerodynamic analysis, mechanical design, control, and flight experiments. The projects below explain the research question behind each robot, how he investigated it, and what the experiments showed.</p>
 
   <div class="project-showcase">
     {projects.map((project) => (
@@ -45,7 +45,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
               </ul>
             </div>
           )}
-          {project.data.role && <p class="project-role"><strong>My role:</strong> {project.data.role}</p>}
+          {project.data.role && <p class="project-role"><strong>Liming's role:</strong> {project.data.role}</p>}
           <div class="actions compact">
             <a class="button primary" href={`/projects/${project.slug}/`}>Project details</a>
             {project.data.links.slice(0, 2).map((link) => <a class="button" href={link.url}>{link.label}</a>)}
@@ -61,7 +61,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       <h2 id="experience-prompt-title">Projects and experience</h2>
       <p>
         Explore a chronological record of field robotics, team competitions, and earlier aircraft
-        projects—from rainforest deployment and IMAV to fixed-wing design and autonomous soaring.
+        projects, including rainforest deployment, IMAV, fixed-wing design, and autonomous soaring.
       </p>
     </div>
     <a class="button primary" href="/experience/">View experience</a>

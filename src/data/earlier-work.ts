@@ -19,7 +19,7 @@ export const earlierWork = [
     summary:
       "A quiet, long-endurance fixed-wing platform developed for ecological monitoring in high-altitude regions, including field testing in Tibet. The aircraft combined an albatross-inspired high-aspect-ratio configuration, solar power, a feather-inspired morphing tail, and early formation-flight experiments.",
     role:
-      "I contributed to aerodynamic, structural, and control-system development; designed the morphing tail; developed PX4 flight-control functions; and served as one of the team pilots across more than 50 flight tests.",
+      "Liming contributed to aerodynamic, structural, and control-system development; designed the morphing tail; developed PX4 flight-control functions; and served as one of the team pilots across more than 50 flight tests.",
     highlights: [
       "3.49 m wingspan and 3.8 kg aircraft mass",
       "Lift-to-drag ratio of 17 and theoretical solar endurance of 18 hours",
@@ -44,7 +44,7 @@ export const earlierWork = [
     summary:
       "A conceptual four-seat urban aircraft combining tilting propulsion for vertical take-off and landing with blown-wing flow control. The design explored whether active flow control could reduce wing area and ground footprint while retaining useful lift and payload capability.",
     role:
-      "I worked on the aerodynamic design, dynamic modelling and analysis, and control-system concept, including control allocation for the vector-jet system.",
+      "Liming worked on the aerodynamic design, dynamic modelling and analysis, and control-system concept, including control allocation for the vector-jet system.",
     highlights: [
       "Tilting propulsion for vertical take-off and landing",
       "Trailing-edge blowing on the fore and rear wings",
@@ -72,7 +72,7 @@ export const earlierWork = [
     summary:
       "A hand-launched fixed-wing aircraft designed to fit with its mission equipment inside a compact transport case. Its three-section folding wing and tail layout enabled rapid deployment while retaining a stable airframe for reconnaissance, target identification, and payload delivery tasks.",
     role:
-      "As one of the principal designers, I worked across aerodynamic and structural design, fabrication, flight-control integration, the retractable camera platform, and extensive flight testing.",
+      "As one of the principal designers, Liming worked across aerodynamic and structural design, fabrication, flight-control integration, the retractable camera platform, and extensive flight testing.",
     highlights: [
       "Reliable unfolding in less than 10 seconds",
       "FPV reconnaissance and real-time image transmission",
@@ -100,7 +100,7 @@ export const earlierWork = [
     summary:
       "A cargo aircraft developed around an extreme mass-efficiency challenge: the airframe and onboard systems were limited to 1 kg, while take-off had to be completed within 25 m. Iterative structural and propulsion testing produced a platform capable of lifting a 6.4 kg payload.",
     role:
-      "I worked on lightweight structural design, material selection, propulsion testing, PX4 data collection, and flight-based performance estimation across several design iterations.",
+      "Liming worked on lightweight structural design, material selection, propulsion testing, PX4 data collection, and flight-based performance estimation across several design iterations.",
     highlights: [
       "1 kg aircraft-system mass limit",
       "6.4 kg demonstrated payload",
@@ -128,7 +128,7 @@ export const earlierWork = [
     summary:
       "A 12 m airship developed as a long-endurance alternative to multirotors for aerial imaging and environmental monitoring. A tilting propulsion pod and three tail motors enabled vertical take-off, landing, and low-speed manoeuvring.",
     role:
-      "I helped initiate the student project and worked as a technical designer and builder, taking the vehicle from an early concept to a successfully flown prototype.",
+      "Liming helped initiate the student project and worked as a technical designer and builder, taking the vehicle from an early concept to a successfully flown prototype.",
     highlights: [
       "12 m vehicle length",
       "6 kg equipment payload",
@@ -152,7 +152,7 @@ export const earlierWork = [
     summary:
       "A study of how fixed-wing UAVs can exploit thermal updrafts in three-dimensional turbulent environments. The work combined a more realistic convection model with learning-based attitude control and a modular navigation strategy for moving between, searching for, and remaining inside thermals.",
     role:
-      "I developed the Rayleigh-Bénard thermal environment, evaluated deep reinforcement learning for attitude control, and created the AS-RL navigation strategy that combined learned Soar, Migrate, and Straight behaviours through a behaviour tree.",
+      "Liming developed the Rayleigh-Bénard thermal environment, evaluated deep reinforcement learning for attitude control, and created the AS-RL navigation strategy that combined learned Soar, Migrate, and Straight behaviours through a behaviour tree.",
     highlights: [
       "Rayleigh-Bénard thermal-convection simulation",
       "Model-free attitude control in turbulence using deep reinforcement learning",
@@ -180,7 +180,7 @@ export const earlierWork = [
     summary:
       "A rapid aircraft-development campaign for the international Air Cargo Challenge, where teams designed and built a fixed-wing aircraft around constrained propulsion, take-off distance, payload, and mission requirements. NPU Innovation placed sixth overall.",
     role:
-      "As the team's only undergraduate member, I focused on composite-material fabrication and also contributed to aircraft sizing, design discussions, testing, and preparation for the competition.",
+      "As the team's only undergraduate member, Liming focused on composite-material fabrication and also contributed to aircraft sizing, design discussions, testing, and preparation for the competition.",
     highlights: [
       "Sixth place internationally",
       "Aircraft developed and tested within a short extracurricular design cycle",
