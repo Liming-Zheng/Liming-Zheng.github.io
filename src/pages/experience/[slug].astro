@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { experiences } from "../../data/experience";
+
+export function getStaticPaths() {
+  return experiences.map((experience) => ({
+    params: { slug: experience.slug },
+    props: { experience }
+  }));
+}
+
+const { experience } = Astro.props;
+---
+
+<BaseLayout
+  title={`${experience.title} | Liming Zheng`}
+  description={experience.summary}
+  image={experience.images[0].src}
+>
+  <a class="back-link" href="/experience/">← All projects and experience</a>
+  <div class="item-meta experience-detail-meta">{experience.period} · {experience.category}</div>
+  <h1 class="experience-detail-title">{experience.title}</h1>
+  <p class="lead">{experience.summary}</p>
+
+  <div class:list={["experience-detail-media", { gallery: experience.images.length > 1 }]}>
+    {experience.images.map((image) => <img src={image.src} alt={image.alt} />)}
+  </div>
+
+  <div class="experience-detail-grid">
+    <section class="experience-detail-block">
+      <h2>Project context</h2>
+      <p>{experience.context}</p>
+    </section>
+    <section class="experience-detail-block contribution-block">
+      <h2>My contribution</h2>
+      <p>{experience.role}</p>
+    </section>
+  </div>
+
+  <section class="experience-outcomes">
+    <h2>Selected outcomes</h2>
+    <ul>
+      {experience.highlights.map((highlight) => <li>{highlight}</li>)}
+    </ul>
+  </section>
+
+  {experience.links.length > 0 && (
+    <section class="experience-sources">
+      <h2>Related sources</h2>
+      <div class="actions compact">
+        {experience.links.map((link) => (
+          <a class="button" href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

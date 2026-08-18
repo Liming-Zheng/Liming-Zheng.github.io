@@ -54,4 +54,16 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       </article>
     ))}
   </div>
+
+  <section class="earlier-work-prompt" aria-labelledby="experience-prompt-title">
+    <div>
+      <span class="eyebrow">Beyond selected research</span>
+      <h2 id="experience-prompt-title">Projects and experience</h2>
+      <p>
+        Explore a chronological record of field robotics, team competitions, and earlier aircraft
+        projects—from rainforest deployment and IMAV to fixed-wing design and autonomous soaring.
+      </p>
+    </div>
+    <a class="button primary" href="/experience/">View experience</a>
+  </section>
 </BaseLayout>

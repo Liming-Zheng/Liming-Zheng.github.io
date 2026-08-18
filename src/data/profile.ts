@@ -4,7 +4,16 @@ export const profile = {
   domain: "limingzheng.com",
   role: "Doctoral researcher in bio-inspired aerial robotics and morphing aircraft.",
   affiliation: "Delft University of Technology",
-  labs: "BioMorphic Intelligence Lab · Micro Air Vehicle Lab",
+  labs: [
+    {
+      name: "MAVLAB",
+      url: "https://mavlab.tudelft.nl/people/"
+    },
+    {
+      name: "BioMorphic Intelligence Lab",
+      url: "https://www.tudelft.nl/ai/biomorphic-intelligence-lab?languageSelect=UK&searchCriteria[0][key]=keywords&searchCriteria[0][values][]=BioMorphicLab&searchCriteria[1][key]=Resultsperpage&searchCriteria[1][values][]=50"
+    }
+  ],
   location: "Delft, Netherlands",
   email: "l.zheng-1@tudelft.nl",
   scholar: "https://scholar.google.com/citations?user=WhpIC1IAAAAJ&hl=zh-CN",

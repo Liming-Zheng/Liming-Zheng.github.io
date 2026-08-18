@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { experiences } from "../../data/experience";
+---
+
+<BaseLayout
+  title="Experience | Liming Zheng"
+  description="A chronological overview of Liming Zheng's aircraft projects, field robotics, competitions, and team achievements."
+  image="/images/highlights/imav-2024-award.png"
+>
+  <span class="eyebrow">Beyond selected research</span>
+  <h1>Projects and experience</h1>
+  <p class="lead">
+    A chronological record of field robotics, team competitions, and aircraft projects that shaped
+    my practical approach to aerial robotics. Select any project to see the system, my contribution,
+    and the main outcomes in more detail.
+  </p>
+
+  <div class="experience-timeline">
+    {experiences.map((experience) => (
+      <article class="experience-card">
+        <a class="experience-card-media" href={`/experience/${experience.slug}/`} aria-label={`Read about ${experience.title}`}>
+          <img src={experience.images[0].src} alt={experience.images[0].alt} loading="lazy" />
+        </a>
+        <div class="experience-card-copy">
+          <div class="item-meta">{experience.period} · {experience.category}</div>
+          <h2><a href={`/experience/${experience.slug}/`}>{experience.title}</a></h2>
+          <p>{experience.summary}</p>
+          <div class="actions compact">
+            <a class="button primary" href={`/experience/${experience.slug}/`}>Project details</a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>
