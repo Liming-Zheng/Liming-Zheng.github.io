@@ -28,6 +28,8 @@ links:
     url: "https://www.nature.com/articles/s41467-026-72822-w"
   - label: "DOI"
     url: "https://doi.org/10.1038/s41467-026-72822-w"
+  - label: "YouTube showcase"
+    url: "https://www.youtube.com/watch?v=37IV3vyoXtk"
 media:
   - title: "Supplementary Movie 1 · Outdoor flight tests"
     src: "/media/supplementary/squirreldrone/movie-1.mp4"

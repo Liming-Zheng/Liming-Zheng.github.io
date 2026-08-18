@@ -7,6 +7,7 @@ export const profile = {
   labs: "BioMorphic Intelligence Lab · Micro Air Vehicle Lab",
   location: "Delft, Netherlands",
   email: "l.zheng-1@tudelft.nl",
+  scholar: "https://scholar.google.com/citations?user=WhpIC1IAAAAJ&hl=zh-CN",
   github: "https://github.com/Liming-Zheng",
   linkedin: "https://www.linkedin.com/in/liming-zheng-a011aa258/",
   orcid: "https://orcid.org/0000-0002-7544-3020",

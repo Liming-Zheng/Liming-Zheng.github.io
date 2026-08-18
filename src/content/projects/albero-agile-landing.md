@@ -30,8 +30,8 @@ links:
     url: "https://research.tudelft.nl/en/publications/albero-agile-landing-on-branches-for-environmental-robotics-opera"
   - label: "Project News"
     url: "https://mavlab.tudelft.nl/albero-agile-dynamic-perching-of-quadrotors-on-real-tree-branches/"
-  - label: "Video"
-    url: "https://www.youtube.com/watch?v=krxqD5sjWZY"
+  - label: "YouTube showcase"
+    url: "https://www.youtube.com/watch?v=krxqD5sjWZY&t=163s"
 media:
   - title: "Flight video · Horizontal branch"
     src: "/media/supplementary/albero/angle-0.mp4"

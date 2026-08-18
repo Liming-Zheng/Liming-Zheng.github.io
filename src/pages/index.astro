@@ -8,10 +8,46 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
 
 <BaseLayout image="/images/research/squirreldrone-whole-body-morphing.jpg">
   <section class="profile-hero">
-    <figure class="profile-portrait">
-      <img src="/images/me.png" alt="Liming Zheng in the aerial robotics laboratory at TU Delft" />
-      <figcaption>Bio-inspired aerial robotics · TU Delft</figcaption>
-    </figure>
+    <aside class="profile-sidebar" aria-label="Affiliation, profiles, and research interests">
+      <figure class="profile-portrait">
+        <img src="/images/me-retouched-natural.png" alt="Liming Zheng in the aerial robotics laboratory at TU Delft" />
+      </figure>
+
+      <div class="profile-sidebar-details">
+        <p class="profile-position">Ph.D. Researcher</p>
+        <p class="profile-affiliation">
+          Faculty of Aerospace Engineering<br />
+          Delft University of Technology
+        </p>
+        <p class="profile-labs">BioMorphic Intelligence Lab · Micro Air Vehicle Lab</p>
+
+        <nav class="profile-links" aria-label="Academic and professional profiles">
+          <a href={`mailto:${profile.email}`}>
+            <span class="profile-link-icon" aria-hidden="true">@</span>
+            <span>Email</span>
+          </a>
+          <a href={profile.scholar} target="_blank" rel="noopener noreferrer">
+            <span class="profile-link-icon" aria-hidden="true">G</span>
+            <span>Google Scholar</span>
+          </a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+            <span class="profile-link-icon profile-link-icon-text" aria-hidden="true">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href={profile.github} target="_blank" rel="noopener noreferrer">
+            <span class="profile-link-icon profile-link-icon-text" aria-hidden="true">GH</span>
+            <span>GitHub</span>
+          </a>
+        </nav>
+
+        <section class="profile-interests" aria-labelledby="research-interests-title">
+          <h2 id="research-interests-title">Research Interests</h2>
+          <ul>
+            {profile.interests.map((interest) => <li>{interest}</li>)}
+          </ul>
+        </section>
+      </div>
+    </aside>
 
     <div class="profile-intro">
       <span class="eyebrow">Morphology-driven intelligence</span>
@@ -43,7 +79,6 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       <div class="actions">
         <a class="button primary" href="/projects/">Research</a>
         <a class="button" href={profile.cv}>Download CV</a>
-        <a class="button" href={`mailto:${profile.email}`}>Email</a>
       </div>
     </div>
   </section>
