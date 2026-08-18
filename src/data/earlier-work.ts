@@ -34,11 +34,6 @@ export const earlierWork = [
         src: "/images/experience/solar-aircraft/aircraft-render.webp",
         alt: "Concept rendering of the bird-inspired solar aircraft",
         caption: "Concept rendering of the bird-inspired solar aircraft."
-      },
-      {
-        src: "/images/experience/solar-aircraft/sunset-flight.webp",
-        alt: "Bird-inspired solar aircraft flying at sunset",
-        caption: "The solar aircraft in flight at sunset during field testing."
       }
     ],
     summary:
@@ -190,19 +185,88 @@ export const earlierWork = [
     context: "Master's thesis, Northwestern Polytechnical University",
     images: [
       {
+        src: "/images/experience/reinforcement-learning-soaring/hero.webp",
+        alt: "A fixed-wing aircraft soaring at sunset",
+        caption: "A fixed-wing aircraft soaring at sunset. Photograph by Liming Zheng."
+      },
+      {
         src: "/images/earlier-work/asrl-navigation-results.webp",
-        alt: "AS-RL flight trajectories and altitude histories for short- and long-distance navigation tasks"
+        alt: "AS-RL flight trajectories and altitude histories for short- and long-distance navigation tasks",
+        caption: "AS-RL trajectories and altitude histories in the short- and long-distance simulation tasks (Master's thesis, Fig. 5-13)."
       }
     ],
     summary:
-      "A study of how fixed-wing UAVs can exploit thermal updrafts in three-dimensional turbulent environments. The work combined a more realistic convection model with learning-based attitude control and a modular navigation strategy for moving between, searching for, and remaining inside thermals.",
+      "Liming's master's thesis investigated how a fixed-wing UAV could navigate through an unknown, time-varying thermal field while harvesting atmospheric energy. He developed a turbulent-convection environment, trained compact reinforcement-learning policies for three complementary flight modes, and combined them in a supervisory strategy that balanced exploration, energy gain, and arrival at the destination.",
+    homeSummary:
+      "Liming's master's thesis developed a reinforcement-learning strategy that enabled a fixed-wing UAV to search for thermal updrafts, gain altitude, and navigate toward a destination in a simulated turbulent wind field.",
     role:
-      "Liming developed the Rayleigh-Bénard thermal environment, evaluated deep reinforcement learning for attitude control, and created the AS-RL navigation strategy that combined learned Soar, Migrate, and Straight behaviours through a behaviour tree.",
+      "Liming developed the Rayleigh-Benard thermal environment, formulated and trained the reinforcement-learning policies, designed the AS-RL behaviour-tree supervisor, and evaluated the complete navigation strategy in short- and long-distance Monte Carlo simulations.",
+    sections: [
+      {
+        title: "Research challenge",
+        paragraphs: [
+          "Conventional waypoint following prioritizes a direct route. In a thermal field, however, the most energy-efficient path depends on updrafts that change in space and time and are not known before flight. The thesis therefore framed point-to-point soaring as an online decision problem: the aircraft must decide when to exploit a detected thermal, when to search nearby regions, and when to stop exploring and fly directly to the destination.",
+          "The objective was not only to reach a target, but to preserve or gain altitude along the way. This creates a deliberate trade-off between mission time, route length, energy harvesting, and probability of arrival."
+        ],
+        items: []
+      },
+      {
+        title: "Turbulent thermal environment",
+        paragraphs: [
+          "The simulation used a three-dimensional, time-varying Rayleigh-Benard convection model rather than an idealized stationary thermal. Multiple updraft and downdraft regions were assembled into a larger navigation domain, allowing the aircraft to encounter changing vertical wind, turbulence, and spatially distributed energy sources.",
+          "The controller did not receive a map of the complete wind field. Its decisions were based on compact local observations that could, in principle, be estimated from onboard flight data."
+        ],
+        items: []
+      },
+      {
+        title: "Reinforcement-learning formulation",
+        paragraphs: [
+          "Liming used tabular SARSA, an on-policy temporal-difference method, to learn flight-mode policies with modest training requirements. Continuous observations were discretized into three qualitative levels, producing policies that were small enough to inspect and computationally inexpensive to execute.",
+          "The state combined the current flight mode, vertical-wind acceleration, the difference in vertical-wind disturbance across the two wingtips, and heading error to the target. The action selected a bank-angle command from -30, -15, 0, 15, or 30 degrees. Each mode used a different reward so that the same observation-action structure could serve distinct mission objectives."
+        ],
+        items: []
+      },
+      {
+        title: "Three learned flight behaviours",
+        paragraphs: [
+          "Rather than asking one policy to solve the complete mission, the navigation task was decomposed into three complementary behaviours."
+        ],
+        items: [
+          "Soar turns toward stronger lift, escapes unfavorable vertical wind, and circles inside an updraft to gain altitude.",
+          "Migrate searches the unknown region while continuing toward the destination, accepting a longer, often zig-zag route to remain in useful rising air.",
+          "Straight tracks the destination directly and prioritizes arrival time rather than atmospheric energy harvesting."
+        ]
+      },
+      {
+        title: "AS-RL supervisory strategy",
+        paragraphs: [
+          "A behaviour tree combined the three learned policies into the active-search reinforcement-learning strategy, AS-RL. When altitude was high, or when the remaining mission time approached the estimated minimum travel time, the supervisor selected Straight. With sufficient time and altitude margin, recent evidence of an updraft triggered Soar; otherwise, Migrate continued the search toward the target. The aircraft left Soar when sustained climb could no longer be maintained.",
+          "This modular design made the decision logic interpretable: reinforcement learning handled local bank-angle decisions, while the behaviour tree enforced mission-level priorities and safety margins."
+        ],
+        items: []
+      },
+      {
+        title: "Simulation results",
+        paragraphs: [
+          "The learned modes produced visibly different strategies. In one 600 s comparison, Migrate spent 380 s in updraft regions and gained 400 m, whereas Straight reached the target in 300 s but lost 140 m. Tests from different initial regions showed similar policy trends, indicating that the compact state representation transferred across locations within the simulated wind field.",
+          "The complete navigation methods were then evaluated over 1,000 flights per condition. In the short-distance task, AS-RL achieved an 80% success rate and an average altitude gain of 277 m. Straight achieved 70% and lost 292 m on average; a reference Edwards strategy achieved 75% and lost 224 m. In the long-distance task, AS-RL reached 86% success with a 259 m average altitude gain, compared with 75% and 237 m for Edwards, while Straight did not complete the route."
+        ],
+        items: []
+      },
+      {
+        title: "Interpretation and scope",
+        paragraphs: [
+          "The results show that active thermal search can turn atmospheric energy into greater range and mission success, but not without cost. AS-RL followed longer paths and generally required more time than direct flight, making it most suitable for endurance-oriented missions without a strict arrival deadline and in environments containing sufficient usable lift.",
+          "This work was a simulation study. It established the navigation concept, exposed the trade-offs among exploration, altitude, time, and success probability, and provided a foundation for later real-world autonomous-soaring experiments rather than claiming flight validation at this stage."
+        ],
+        items: []
+      }
+    ],
     highlights: [
-      "Rayleigh-Bénard thermal-convection simulation",
-      "Model-free attitude control in turbulence using deep reinforcement learning",
-      "SARSA-trained Soar, Migrate, and Straight behaviours",
-      "Behaviour-tree integration for point-to-point navigation in multi-thermal wind fields"
+      "Three-dimensional, time-varying Rayleigh-Benard thermal-convection simulation",
+      "SARSA-trained Soar, Migrate, and Straight behaviours using compact local wind observations",
+      "Interpretable behaviour-tree integration for active thermal search and point-to-point navigation",
+      "1,000-flight evaluations for both short- and long-distance navigation scenarios"
     ]
   },
   {

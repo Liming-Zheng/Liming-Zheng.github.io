@@ -6,9 +6,11 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
 ---
 
 <BaseLayout title="Research | Liming Zheng" image="/images/research/squirreldrone-whole-body-morphing.jpg">
-  <span class="eyebrow">Research projects</span>
-  <h1>Selected research</h1>
-  <p class="lead">Liming Zheng's work combines bio-inspired morphology, aerodynamic analysis, mechanical design, control, and flight experiments. The projects below explain the research question behind each robot, how he investigated it, and what the experiments showed.</p>
+  <header class="listing-intro">
+    <span class="eyebrow">Research projects</span>
+    <h1>Selected research</h1>
+    <p class="lead">Liming Zheng's work combines bio-inspired morphology, aerodynamic analysis, mechanical design, control, and flight experiments. The projects below explain the research question behind each robot, how he investigated it, and what the experiments showed.</p>
+  </header>
 
   <div class="project-showcase">
     {projects.map((project) => (

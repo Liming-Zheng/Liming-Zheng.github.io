@@ -174,7 +174,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
           <div class="research-card-body">
             <div class="item-meta">{experience.period} · {experience.category}</div>
             <h3><a href={`/experience/${experience.slug}/`}>{experience.title}</a></h3>
-            <p>{experience.summary}</p>
+            <p>{"homeSummary" in experience ? experience.homeSummary : experience.summary}</p>
             <div class="actions compact">
               <a class="button primary" href={`/experience/${experience.slug}/`}>Experience details</a>
             </div>

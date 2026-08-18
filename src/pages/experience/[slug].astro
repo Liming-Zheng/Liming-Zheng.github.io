@@ -42,6 +42,22 @@ const { experience } = Astro.props;
     </section>
   </div>
 
+  {"sections" in experience && experience.sections.length > 0 && (
+    <div class="experience-narrative">
+      {experience.sections.map((section) => (
+        <section class="experience-narrative-section">
+          <h2>{section.title}</h2>
+          {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          {section.items.length > 0 && (
+            <ul>
+              {section.items.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+        </section>
+      ))}
+    </div>
+  )}
+
   <section class="experience-outcomes">
     <h2>Selected outcomes</h2>
     <ul>
