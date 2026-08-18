@@ -4,7 +4,7 @@ export const earlierWork = [
     sortOrder: 2020.2,
     category: "Aircraft development and field testing",
     period: "2018–2020",
-    title: "Bio-inspired solar aircraft and formation flight",
+    title: "Bird-inspired solar aircraft and formation flight",
     context: "Northwestern Polytechnical University",
     images: [
       {
@@ -14,6 +14,31 @@ export const earlierWork = [
       {
         src: "/images/earlier-work/solar-formation.webp",
         alt: "Three solar aircraft flying in formation"
+      },
+      {
+        src: "/images/experience/solar-aircraft/design.webp",
+        alt: "Bird-inspired solar aircraft and feather-inspired morphing-tail configurations",
+        caption: "Bird-inspired solar aircraft and its feather-inspired morphing-tail configurations."
+      },
+      {
+        src: "/images/experience/solar-aircraft/formation.webp",
+        alt: "Concept rendering of Sunbird aircraft flying in formation",
+        caption: "Concept rendering of the Sunbird aircraft flying in formation."
+      },
+      {
+        src: "/images/experience/solar-aircraft/challenge-cup-award.webp",
+        alt: "Challenge Cup Top Prize award ceremony",
+        caption: "Challenge Cup award ceremony. The project received the Top Prize, the competition's highest award."
+      },
+      {
+        src: "/images/experience/solar-aircraft/aircraft-render.webp",
+        alt: "Concept rendering of the bird-inspired solar aircraft",
+        caption: "Concept rendering of the bird-inspired solar aircraft."
+      },
+      {
+        src: "/images/experience/solar-aircraft/sunset-flight.webp",
+        alt: "Bird-inspired solar aircraft flying at sunset",
+        caption: "The solar aircraft in flight at sunset during field testing."
       }
     ],
     summary:
@@ -67,6 +92,16 @@ export const earlierWork = [
       {
         src: "/images/earlier-work/foldable-recon-underwing.webp",
         alt: "Underside view of the foldable reconnaissance aircraft in flight"
+      },
+      {
+        src: "/images/experience/foldable-aircraft/hand-launch.webp",
+        alt: "Liming Zheng hand-launching the foldable reconnaissance aircraft",
+        caption: "Liming hand-launching the aircraft for a flight test."
+      },
+      {
+        src: "/images/experience/foldable-aircraft/preflight-check.webp",
+        alt: "Liming Zheng checking the foldable reconnaissance aircraft before take-off",
+        caption: "Pre-flight inspection before another test sortie."
       }
     ],
     summary:
@@ -123,6 +158,16 @@ export const earlierWork = [
       {
         src: "/images/earlier-work/airship-tv.webp",
         alt: "Television coverage of the student airship project"
+      },
+      {
+        src: "/images/experience/airship/first-flight.webp",
+        alt: "The tilting-propulsion airship during its first flight",
+        caption: "The 12 m airship during its first successful flight."
+      },
+      {
+        src: "/images/experience/airship/assembly.webp",
+        alt: "Student team assembling the tilting-propulsion airship",
+        caption: "Assembling and preparing the airship for testing."
       }
     ],
     summary:

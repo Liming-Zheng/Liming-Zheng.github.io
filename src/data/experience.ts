@@ -10,8 +10,29 @@ const fieldWork = [
     context: "International Micro Air Vehicle Conference and Competition",
     images: [
       {
-        src: "/images/highlights/imav-2024-award.png",
-        alt: "Liming Zheng and the TU Delft team receiving the IMAV 2024 indoor competition award"
+        src: "/images/experience/imav-2024/award-ceremony.webp",
+        alt: "Liming Zheng and Team Tucan receiving the IMAV 2024 indoor competition award",
+        caption: "Team Tucan receiving first place in the IMAV 2024 indoor competition."
+      },
+      {
+        src: "/images/experience/imav-2024/overnight-test.webp",
+        alt: "Liming Zheng and Anton after completing a successful late-night drone test",
+        caption: "Liming and Anton after completing a successful test at around 3 a.m. before the competition."
+      },
+      {
+        src: "/images/experience/imav-2024/bristol-team.webp",
+        alt: "Anton, Martijn, and Liming Zheng at Bristol Robotics Laboratory",
+        caption: "Anton, Martijn, and Liming, from left to right, at Bristol Robotics Laboratory."
+      },
+      {
+        src: "/images/experience/imav-2024/trophy.webp",
+        alt: "IMAV 2024 Indoor Competition winner trophy",
+        caption: "The IMAV 2024 Indoor Competition winner's trophy."
+      },
+      {
+        src: "/images/experience/imav-2024/certificate.webp",
+        alt: "First-place certificate for Team Tucan at IMAV 2024",
+        caption: "The first-place certificate awarded to Team Tucan."
       }
     ],
     summary:
@@ -42,6 +63,31 @@ const fieldWork = [
       {
         src: "/images/highlights/xprize-rainforest-liming.png",
         alt: "Liming Zheng testing a branch-perching drone with the ETHBiodivX team in the rainforest"
+      },
+      {
+        src: "/images/experience/xprize-rainforest/parameter-tuning.webp",
+        alt: "Liming Zheng tuning the perching drone in a Singapore rainforest",
+        caption: "Liming tuning the perching drone during rainforest field tests in Singapore."
+      },
+      {
+        src: "/images/experience/xprize-rainforest/team-three.webp",
+        alt: "Liming Zheng, Andrew, and Seamus in the rainforest",
+        caption: "Liming, Andrew, and Seamus, from left to right, during field testing."
+      },
+      {
+        src: "/images/experience/xprize-rainforest/successful-perch.webp",
+        alt: "Liming Zheng beside the drone after a successful branch perch",
+        caption: "A successful branch perch during rainforest testing."
+      },
+      {
+        src: "/images/experience/xprize-rainforest/preflight-team.webp",
+        alt: "Salua Hamaza, Andrew, Liming Zheng, and Seamus preparing for XPRIZE field tests",
+        caption: "Pre-field-test preparation with Salua, Andrew, Liming, and Seamus, from left to right."
+      },
+      {
+        src: "/images/experience/xprize-rainforest/ethbiodivx-team.webp",
+        alt: "The ETHBiodivX team at the XPRIZE Rainforest competition",
+        caption: "The ETHBiodivX team during the XPRIZE Rainforest campaign."
       }
     ],
     summary:

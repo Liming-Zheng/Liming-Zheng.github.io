@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationLists from "../components/PublicationLists.astro";
 import { experiences } from "../data/experience";
 import { profile } from "../data/profile";
 
@@ -145,14 +146,12 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
   </section>
 
   <section class="home-highlights" aria-labelledby="experience-title">
-    <div class="section-heading">
-      <div>
-        <h2 id="experience-title">Projects, field work, and team achievements</h2>
-        <p>
-          Systems that Liming Zheng has helped design, build, test, and deploy, including aircraft development,
-          rainforest field robotics and international competitions.
-        </p>
-      </div>
+    <div class="section-heading experience-section-heading">
+      <h2 id="experience-title">Projects, field work, and team achievements</h2>
+      <p>
+        Systems that Liming Zheng has helped design, build, test, and deploy, including aircraft development,
+        rainforest field robotics and international competitions.
+      </p>
       <div class="experience-heading-actions">
         <a class="text-link" href="/experience/">View the full timeline</a>
         <div class="carousel-controls" aria-label="Experience carousel controls">
@@ -183,6 +182,17 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
         </article>
       ))}
     </div>
+  </section>
+
+  <section class="home-publications" aria-labelledby="home-publications-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="home-publications-title">Publications</h2>
+        <p>Journal articles, manuscripts, and conference papers spanning bio-inspired aerial robotics, morphing aircraft, environmental field robotics, and flight control.</p>
+      </div>
+      <a class="text-link" href="/publications/">View publications page</a>
+    </div>
+    <PublicationLists nested />
   </section>
 </BaseLayout>
 

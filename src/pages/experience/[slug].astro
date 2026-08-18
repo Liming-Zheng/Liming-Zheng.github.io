@@ -23,7 +23,12 @@ const { experience } = Astro.props;
   <p class="lead">{experience.summary}</p>
 
   <div class:list={["experience-detail-media", { gallery: experience.images.length > 1 }]}>
-    {experience.images.map((image) => <img src={image.src} alt={image.alt} />)}
+    {experience.images.map((image) => (
+      <figure>
+        <img src={image.src} alt={image.alt} loading="lazy" />
+        {"caption" in image && image.caption && <figcaption>{image.caption}</figcaption>}
+      </figure>
+    ))}
   </div>
 
   <div class="experience-detail-grid">

@@ -1,0 +1,56 @@
+---
+import { conferencePublications, journalPublications } from "../data/publications";
+
+const { nested = false } = Astro.props;
+const GroupHeading = nested ? "h3" : "h2";
+const PublicationHeading = nested ? "h4" : "h3";
+const authorName = "Liming Zheng";
+const splitAuthors = (authors: string) => authors.split(authorName);
+---
+
+<GroupHeading class="publication-section-title">Journal articles & manuscripts</GroupHeading>
+<ol class="publication-list">
+  {journalPublications.map((publication) => (
+    <li class:list={["publication", { featured: publication.featured }]}>
+      <div class="publication-year">{publication.year}</div>
+      <div>
+        <PublicationHeading>{publication.title}</PublicationHeading>
+        <p class="publication-authors">
+          {splitAuthors(publication.authors).map((part, index, parts) => (
+            <>{part}{index < parts.length - 1 && <strong>{authorName}</strong>}</>
+          ))}
+        </p>
+        <p class="publication-venue">{publication.venue}</p>
+        <div class="publication-links">
+          {"paper" in publication && publication.paper && (
+            <a class="text-link" href={publication.paper}>Paper →</a>
+          )}
+          {"project" in publication && publication.project && (
+            <a class="text-link" href={publication.project}>Research story →</a>
+          )}
+        </div>
+      </div>
+    </li>
+  ))}
+</ol>
+
+<GroupHeading class="publication-section-title">Conference papers</GroupHeading>
+<ol class="publication-list">
+  {conferencePublications.map((publication) => (
+    <li class:list={["publication", { featured: publication.featured }]}>
+      <div class="publication-year">{publication.year}</div>
+      <div>
+        <PublicationHeading>{publication.title}</PublicationHeading>
+        <p class="publication-authors">
+          {splitAuthors(publication.authors).map((part, index, parts) => (
+            <>{part}{index < parts.length - 1 && <strong>{authorName}</strong>}</>
+          ))}
+        </p>
+        <p class="publication-venue">{publication.venue}</p>
+        {"paper" in publication && publication.paper && (
+          <a class="text-link" href={publication.paper}>Paper →</a>
+        )}
+      </div>
+    </li>
+  ))}
+</ol>
