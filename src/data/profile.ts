@@ -1,7 +1,7 @@
 export const profile = {
   name: "Liming Zheng",
   nameZh: "郑黎明",
-  domain: "liming-zheng.github.io",
+  domain: "limingzheng.com",
   role: "Doctoral researcher in bio-inspired aerial robotics and morphing aircraft.",
   affiliation: "Delft University of Technology",
   labs: [
