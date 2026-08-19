@@ -317,34 +317,72 @@ h3 {
   stroke: none;
 }
 
-.profile-interests {
+.profile-primary-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   margin-top: 24px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
 
-.profile-interests h2 {
-  margin: 0 0 10px;
+.profile-primary-actions .button {
+  min-width: 0;
+  width: 100%;
+  padding-inline: 8px;
+  justify-content: center;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.home-interests {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(28px, 5vw, 70px);
+  align-items: start;
+  margin: 0 0 72px;
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--signal);
+  border-radius: 18px;
+  background: #eef5f3;
+}
+
+.home-interests h2 {
+  margin: 0;
   padding: 0;
   border: 0;
-  color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  letter-spacing: -0.035em;
 }
 
-.profile-interests ul {
+.home-interests ul {
   display: grid;
-  gap: 6px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 32px;
   margin: 0;
-  padding-left: 1.05rem;
+  padding: 0;
+  list-style: none;
 }
 
-.profile-interests li {
+.home-interests li {
+  position: relative;
+  padding-left: 18px;
   color: #33413e;
-  font-size: 0.82rem;
-  line-height: 1.45;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.home-interests li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  content: "";
+  transform: translateY(-50%);
 }
 
 .profile-intro h1 {
@@ -1449,6 +1487,12 @@ h3 {
     max-width: 360px;
   }
 
+  .home-interests {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 56px;
+  }
+
   .featured-grid {
     grid-template-columns: 1fr;
   }
@@ -1565,5 +1609,14 @@ h3 {
   .profile-intro h1 span {
     display: block;
     margin-top: 6px;
+  }
+
+  .home-interests {
+    padding: 24px 22px;
+  }
+
+  .home-interests ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }

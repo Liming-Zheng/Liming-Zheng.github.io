@@ -10,7 +10,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
 
 <BaseLayout image="/images/research/squirreldrone-whole-body-morphing.jpg">
   <section class="profile-hero">
-    <aside class="profile-sidebar" aria-label="Affiliation, profiles, and research interests">
+    <aside class="profile-sidebar" aria-label="Affiliation, profiles, and primary links">
       <figure class="profile-portrait">
         <img src="/images/me-with-suit.webp" alt="Liming Zheng in the aerial robotics laboratory at TU Delft" />
       </figure>
@@ -67,12 +67,11 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
           </a>
         </nav>
 
-        <section class="profile-interests" aria-labelledby="research-interests-title">
-          <h2 id="research-interests-title">Research Interests</h2>
-          <ul>
-            {profile.interests.map((interest) => <li>{interest}</li>)}
-          </ul>
-        </section>
+        <nav class="profile-primary-actions" aria-label="Primary pages">
+          <a class="button primary" href="/projects/">Research</a>
+          <a class="button" href="/experience/">Experience</a>
+          <a class="button" href={profile.cv}>Download CV</a>
+        </nav>
       </div>
     </aside>
 
@@ -103,11 +102,14 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
         <strong>Research goal:</strong> To create aerial robots that fly and adapt like living
         systems—and work where they are needed most.
       </p>
-      <div class="actions">
-        <a class="button primary" href="/projects/">Research</a>
-        <a class="button" href={profile.cv}>Download CV</a>
-      </div>
     </div>
+  </section>
+
+  <section class="home-interests" aria-labelledby="research-interests-title">
+    <h2 id="research-interests-title">Research Interests</h2>
+    <ul>
+      {profile.interests.map((interest) => <li>{interest}</li>)}
+    </ul>
   </section>
 
   <section class="home-research" aria-labelledby="selected-research-title">
