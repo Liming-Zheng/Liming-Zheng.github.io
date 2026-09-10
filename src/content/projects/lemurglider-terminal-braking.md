@@ -3,7 +3,7 @@ title: "Head-body coupling for pitch stability and aerodynamic braking"
 subtitle: "A colugo-inspired morphing platform that coordinates its head, body, and posterior surfaces to restore pitch stability and execute terminal braking for perching."
 date: "2026"
 order: 2
-venue: "Proceedings of the National Academy of Sciences"
+venue: "Nature Mechanical Engineering"
 status: "Under review"
 homeSummary: "A colugo-inspired glider that couples head and body morphing to restore pitch stability, increase aerodynamic braking, and prepare for perching."
 researchQuestion: "How can a gliding robot shed energy rapidly for perching while retaining pitch stability as its angle of attack rises and the flow begins to separate?"

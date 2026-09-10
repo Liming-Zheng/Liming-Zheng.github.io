@@ -12,7 +12,7 @@ export const journalPublications = [
     year: "2026",
     title: "Head-body coupling inspired by gliding mammals restores pitch stability and enables aerodynamic braking for perching",
     authors: "Liming Zheng, Baihui Chen, Alexander van Zuijlen, and Salua Hamaza",
-    venue: "Under review at Proceedings of the National Academy of Sciences (PNAS)",
+    venue: "Under review at Nature Mechanical Engineering",
     project: "/projects/lemurglider-terminal-braking/",
     featured: true
   },
