@@ -6,10 +6,6 @@ export const profile = {
   affiliation: "Delft University of Technology",
   labs: [
     {
-      name: "MAVLAB",
-      url: "https://mavlab.tudelft.nl/people/"
-    },
-    {
       name: "BioMorphic Intelligence Lab",
       url: "https://www.tudelft.nl/ai/biomorphic-intelligence-lab?languageSelect=UK&searchCriteria[0][key]=keywords&searchCriteria[0][values][]=BioMorphicLab&searchCriteria[1][key]=Resultsperpage&searchCriteria[1][values][]=50"
     }
