@@ -2,6 +2,39 @@ import { earlierWork } from "./earlier-work";
 
 const fieldWork = [
   {
+    slug: "argus-morphing-wing",
+    sortOrder: 2026.10,
+    category: "Postdoctoral research · Research software",
+    period: "April–October 2026",
+    title: "ARGUS: Morphing-wing aerodynamic optimization",
+    context: "TU Delft · ARGUS WP1, Task 1.3 · Short-term postdoctoral project",
+    images: [
+      {
+        src: "/images/research/argus/morphing-wing-concept.jpg",
+        alt: "Conceptual illustration of an adaptive morphing aircraft wing",
+        caption: "Conceptual morphing-wing illustration; not a photograph of an ARGUS demonstrator."
+      },
+      {
+        src: "/images/research/argus/workflow.png",
+        alt: "ARGUS software interface for aerodynamic optimization and future structural coupling",
+        caption: "A reusable interface connects geometry, aerodynamic evaluation, and future structural and actuator models."
+      }
+    ],
+    summary: "A short-term postdoctoral project developing reproducible research software for morphing-wing aerodynamic analysis and constrained optimization within ARGUS.",
+    role: "Liming led development of the OpenVSP/VSPAERO geometry, analysis, and optimization workflow, audited the aerodynamic evidence, and delivered documented software and multidisciplinary extension interfaces. He is the planned first author of an associated SoftwareX submission.",
+    highlights: [
+      "Public research software with original code and documentation under the BSD 3-Clause License",
+      "Four-concept comparison under matched lift and illustrative bending constraints",
+      "Audited cruise evidence: 102 geometries and 204 trimmed state evaluations",
+      "Low-order late-cruise wing induced-drag reductions of approximately 4.3% for the selected continuous concepts",
+      "Planned submission to SoftwareX"
+    ],
+    links: [
+      { label: "Research story", url: "/projects/argus-aerodynamic-workflow/" },
+      { label: "GitHub · Code & workflow", url: "https://github.com/Liming-Zheng/ARGUS_Aerodynamic_Workflow" }
+    ]
+  },
+  {
     slug: "imav-2024",
     sortOrder: 2024.2,
     category: "Team competition",
