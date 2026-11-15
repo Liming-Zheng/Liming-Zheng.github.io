@@ -335,6 +335,36 @@ h3 {
   white-space: nowrap;
 }
 
+.home-news {
+  border-top: 1px solid var(--line);
+  padding-block: 24px;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 4px 16px;
+  border-bottom: 1px solid var(--line);
+  padding-block: 12px;
+}
+
+.news-list time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 540px) {
+  .news-list li {
+    grid-template-columns: 1fr;
+  }
+}
+
 .home-interests {
   display: grid;
   grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr);

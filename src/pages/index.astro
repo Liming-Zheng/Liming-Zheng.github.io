@@ -3,8 +3,13 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationLists from "../components/PublicationLists.astro";
 import { experiences } from "../data/experience";
+import { news } from "../data/news";
 import { profile } from "../data/profile";
 
+const newsDate = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "medium",
+  timeZone: "UTC"
+});
 const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
 ---
 
@@ -16,10 +21,9 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       </figure>
 
       <div class="profile-sidebar-details">
-        <p class="profile-position">Ph.D. Researcher</p>
+        <p class="profile-position">Ph.D. in Aerospace Engineering</p>
         <p class="profile-affiliation">
-          Faculty of Aerospace Engineering<br />
-          Delft University of Technology
+          Delft University of Technology · 2026
         </p>
         <p class="profile-labs">
           {profile.labs.map((lab, index) => (
@@ -78,8 +82,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
     <div class="profile-intro">
       <h1>{profile.name}<span>{profile.nameZh}</span></h1>
       <p>
-        Liming Zheng is a researcher in bio-inspired aerial robotics at Delft University of
-        Technology. He studies how <strong>morphology can provide embodied intelligence</strong>,
+        Liming Zheng is a researcher in bio-inspired aerial robotics. He studies how <strong>morphology can provide embodied intelligence</strong>,
         allowing aerial robots to adapt to changing aerodynamic conditions and operate in complex,
         unstructured environments.
       </p>
@@ -95,8 +98,8 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
         branch-perching drone for rainforest acoustic monitoring and a solar-powered aircraft for
         long-endurance wildlife monitoring on the Tibetan Plateau.
         His research has been published in <strong>Nature Communications</strong> and
-        <strong>IEEE Robotics and Automation Letters</strong>. He is currently completing his Ph.D.
-        in Aerospace Engineering at TU Delft under the supervision of
+        <strong>IEEE Robotics and Automation Letters</strong>. He earned his Ph.D. in Aerospace Engineering
+        from TU Delft on November 13, 2026, under the supervision of
         Prof. <a href="https://saluahamaza.eu/" target="_blank" rel="noopener noreferrer">Salua Hamaza</a>,
         Dr. <a href="https://www.tudelft.nl/staff/a.h.vanzuijlen/" target="_blank" rel="noopener noreferrer">Alexander van Zuijlen</a>, and
         Prof. <a href="https://mavlab.tudelft.nl/people/" target="_blank" rel="noopener noreferrer">Guido de Croon</a>.
@@ -112,6 +115,20 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
     <h2 id="research-interests-title">Research Interests</h2>
     <ul>
       {profile.interests.map((interest) => <li>{interest}</li>)}
+    </ul>
+  </section>
+
+  <section class="home-news" id="news" aria-labelledby="news-title">
+    <div class="section-heading">
+      <h2 id="news-title">News</h2>
+    </div>
+    <ul class="news-list">
+      {[...news].sort((a, b) => b.date.localeCompare(a.date)).map((item) => (
+        <li>
+          <time datetime={item.date}>{newsDate.format(new Date(item.date))}</time>
+          <span>{item.text}</span>
+        </li>
+      ))}
     </ul>
   </section>
 

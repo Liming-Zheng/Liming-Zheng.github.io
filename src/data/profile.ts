@@ -2,7 +2,7 @@ export const profile = {
   name: "Liming Zheng",
   nameZh: "郑黎明",
   domain: "limingzheng.com",
-  role: "Doctoral researcher in bio-inspired aerial robotics and morphing aircraft.",
+  role: "Researcher in bio-inspired aerial robotics and morphing aircraft. Ph.D. in Aerospace Engineering, TU Delft (2026).",
   affiliation: "Delft University of Technology",
   labs: [
     {
