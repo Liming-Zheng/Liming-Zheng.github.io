@@ -126,7 +126,7 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       {[...news].sort((a, b) => b.date.localeCompare(a.date)).map((item) => (
         <li>
           <time datetime={item.date}>{newsDate.format(new Date(item.date))}</time>
-          <span>{item.text}</span>
+          <span><span aria-hidden="true">{item.emoji}</span>{" "}{item.text}</span>
         </li>
       ))}
     </ul>
