@@ -126,7 +126,18 @@ const projects = (await getCollection("projects")).sort((a, b) => a.data.order -
       {[...news].sort((a, b) => b.date.localeCompare(a.date)).map((item) => (
         <li>
           <time datetime={item.date}>{newsDate.format(new Date(item.date))}</time>
-          <span><span aria-hidden="true">{item.emoji}</span>{" "}{item.text}</span>
+          <div>
+            <span><span aria-hidden="true">{item.emoji}</span>{" "}{item.text}</span>
+            {item.photos?.length && (
+              <div class="news-photos" role="group" aria-label="News photos">
+                {item.photos.map((photo) => (
+                  <a href={photo.src}>
+                    <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </li>
       ))}
     </ul>

@@ -354,6 +354,30 @@ h3 {
   padding-block: 12px;
 }
 
+.news-photos {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.news-photos a {
+  width: min(30%, 150px);
+  display: block;
+}
+
+.news-photos a:first-child {
+  width: min(65%, 300px);
+}
+
+.news-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .news-list time {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
